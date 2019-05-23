@@ -21,7 +21,8 @@ router.post("/shorturl", (req, res) => {
     newshortUrl.save().catch(err => {
       console.log(err);
     });
-    let shortUrl = `localhost:3000/${key}`;
+    // let shortUrl = `localhost:3000/${key}`;
+    let shortUrl = `https://salty-journey-66734.herokuapp.com/${key}`;
     res.render("result", { shortUrl, key });
   }
 });
